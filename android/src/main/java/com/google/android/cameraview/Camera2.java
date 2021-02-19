@@ -1400,6 +1400,9 @@ class Camera2 extends CameraViewImpl implements MediaRecorder.OnInfoListener, Me
             camProfile = CamcorderProfile.get(CamcorderProfile.QUALITY_HIGH);
         }
         camProfile.videoBitRate = profile.videoBitRate;
+        camProfile.videoFrameWidth = 1440;
+        camProfile.videoFrameHeight = 1080;
+        camProfile.videoFrameRate = 15;
         setCamcorderProfile(camProfile, recordAudio);
 
         mMediaRecorder.setOrientationHint(getOutputRotation());
